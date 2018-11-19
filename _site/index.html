@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>3d nyomtatás | Lego kör</title>
+
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+
+    <a class="navbar-brand" href="/">Lego3d</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBar" aria-controls="navBar"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navBar">
+        <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item active">
+                <a class="nav-link" href="#printing">Nyomtatás</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#gallery">Galéria</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#about">Rólunk</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#contact">Kapcsolat</a>
+            </li>
+            
+        </ul>
+    </div>
+</nav>
+    <div class="intro-video-container">
+    <video class="intro-video" autoplay muted loop>
+        <source src="/images/intro.mp4" type="video/mp4">
+    </video>
+    <div class="intro-video-fader"></div>
+</div>
+
+<div class="container">
+    <div class="jumbotron">
+        <h1 class="display-4">Nyomtass velünk!</h1>
+        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
+            featured content or information.</p>
+        <hr class="my-4">
+        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <p class="lead">
+        <a class="btn btn-primary btn-lg" href="#" role="button">Kezdés »</a>
+        </p>
+    </div>
+</div>
+
+
+
+<div class="container-fluid" id="printing">
+    <div class="container">
+    <h2>Kalkulátor</h2>
+    <form>
+    <div class="form-group">
+        <label for="xsize">X méret</label>
+        <input type="text" class="form-control" id="xsize" placeholder="Add meg x méretet mm-ben">
+    </div>
+    <div class="form-group">
+        <label for="xsize">Y méret</label>
+        <input type="text" class="form-control" id="xsize" placeholder="Add meg y méretet mm-ben">
+    </div>
+    <div class="form-group">
+        <label for="xsize">Z méret</label>
+        <input type="text" class="form-control" id="xsize" placeholder="Add meg z méretet mm-ben">
+    </div>
+   
+    <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Bonyolúlt</label>
+    </div>
+    <div class="text-center">
+        <button type="submit" class="btn btn-primary">Számol</button>
+    </div>
+</form>
+</div>
+</div>
+
+<div class="container-fluid" id="about">
+    <h2>Rólunk</h2>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae ex semper, pulvinar urna et, imperdiet
+        massa.
+        Nullam quis feugiat sem, vel lacinia ipsum. Nam feugiat ex viverra, posuere justo et, dictum libero. Morbi
+        pellentesque
+        et augue ac placerat. Quisque blandit arcu ac efficitur ornare. Suspendisse porta nisi at euismod ornare. Nam
+        quis
+        cursus augue. Nullam vulputate arcu ac magna imperdiet, id dapibus felis maximus. Mauris dui enim, elementum
+        quis nulla
+        sed, bibendum elementum risus. Cras tellus felis, varius nec nisl quis, consectetur mollis dolor. Vestibulum
+        ullamcorper augue eu est blandit, et tempor lectus varius.
+    </p>
+</div>
+
+<div class="container-fluid" id="gallery">
+    <h2>Galéria</h2>
+    <div id="image-slider" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        
+            
+                <div class="carousel-item active">
+                    <img class="d-block" src="/images/gallery/test1.jpg" alt="gallery-image-1">
+                </div>
+            
+        
+            
+                <div class="carousel-item ">
+                    <img class="d-block" src="/images/gallery/test2.jpg" alt="gallery-image-2">
+                </div>
+            
+        
+            
+                <div class="carousel-item ">
+                    <img class="d-block" src="/images/gallery/test3.jpg" alt="gallery-image-3">
+                </div>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+
+    <a class="carousel-control-prev" href="#image-slider" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+
+    <a class="carousel-control-next" href="#image-slider" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+
+</div>
+</div>
+
+<div class="container-fluid" id="contact">
+    <h2>Kapcsolat</h2>
+    <p>Email: 3dnyomtatas@simonyi.bme.hu</p>
+    <p>Hely: SCH1619</p>
+</div>
+
+    <!-- JS -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
+    crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<script src="/js/main.js"></script>
+
+<div class="container-fluid footer">
+    <div class="logo-container">
+        <a href="https://legokor.hu" target="_blank"><img class="logo" src="/images/lego-logo.png" alt="lego-logo"></a>
+        <a href="https://simonyi.bme.hu" target="_blank"><img class="logo" src="/images/simonyi-logo.png" alt="simonyi-logo"></a>
+        <a href="http://sch.bme.hu" target="_blank"><img class="logo" src="/images/sch-logo.png" alt="sch-logo"></a>
+    </div>
+    <span>© LEGO kör 2018</span>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+---
+---
+
+@import '../_sass/bootstrap/bootstrap.scss';
+
+body{
+    background-color: black;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+// Navbar
+.navbar{
+    border-bottom: 2px solid $primary;
+    margin-bottom: 15px;
+    z-index: 3;
+}
+
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    .navbar {
+        padding-bottom: 0px;
+    }
+
+    .navbar-light .navbar-nav .nav-link,
+    .navbar-light .navbar-brand,
+    .navbar-light .navbar-toggler {
+        color: white;
+    }
+}
+
+@media (max-width: map-get($grid-breakpoints, lg)) {
+    .navbar-light .navbar-nav .nav-link,
+    .navbar-light .navbar-brand {
+        color: inherit;
+    }
+
+    .navbar-light {
+        background-color: white;
+        transition: background-color 200ms linear;
+    }
+}
+
+.navbar-light.scrolled .navbar-nav .nav-link,
+.navbar-light.scrolled .navbar-brand {
+    color: inherit;
+}
+
+.navbar-light.scrolled{
+    background-color: white;
+    transition: background-color 200ms linear;
+}
+
+.nav-item{
+    padding: 0px 15px;
+}
+.nav-item.active{
+    background-color: $primary;
+    color: #fff;
+}
+
+//Main page
+h2{
+    text-align: center;
+}
+
+//Video
+.intro-video-container{
+    max-height: 500px;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+}
+.intro-video{
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 500px;
+}
+.intro-video-fader
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+//Workwithus
+.jumbotron{
+    color: white;
+    background-color: transparent;
+    margin-bottom: 0px;
+}
+
+//Printing
+#printing{
+    background-color: white;
+    padding: 20px;
+}
+
+#contact, #about, #gallery{
+    width: 100%;
+    padding: 20px;
+    background-color: $secondary;
+}
+#gallery {
+    background-color: white;
+}
+#gallery #image-slider{
+    height: 100%;
+}
+#image-slider img{
+    max-height: 400px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+
+//Footer
+.footer{
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: $primary;
+    color: white;
+}
+
+.footer .logo {
+    margin: 0px 10px;
+    max-height: 40px;
+}
+
+@media (max-width: map-get($grid-breakpoints, lg)) {
+    .footer {
+        justify-content: center;
+    }
+    .footer .logo-container{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .footer .logo{
+        margin: 10px;
+    }
+}
