@@ -1,1 +1,11 @@
-theme: jekyll-theme-architect
+# Site settings
+title: 3d nyomtatás | Lego kör
+email: 3dnyomtatas@simonyi.bme.hu
+author: Lego kör
+description:
+url: https://3d.legokor.hu
+
+# Build settings
+permalink: :title/
+sass:
+  sass_dir: _sass
