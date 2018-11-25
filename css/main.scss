@@ -69,12 +69,12 @@ h2{
     max-height: 500px;
     height: 100%;
     width: 100%;
-    position: fixed;
+    position: absolute;
     top: 0px;
     left: 0px;
     z-index: -1;
 }
-.intro-video{
+.intro-video, .intro-image{
     position: absolute;
     object-fit: cover;
     width: 100%;
@@ -95,22 +95,34 @@ h2{
     background-color: transparent;
     margin-bottom: 0px;
 }
-
+@media (max-width: map-get($grid-breakpoints, lg)) {
+    .jumbotron{
+        padding: 0;
+    }
+}
 //Printing
 #printing{
     background-color: white;
     padding: 20px;
 }
 
-#contact, #about, #gallery{
+#contact,
+#about,
+#reference {
     width: 100%;
     padding: 20px;
     background-color: $secondary;
 }
-#gallery {
+#reference {
     background-color: white;
 }
-#gallery #image-slider{
+
+#reference .grid-item,
+.grid-sizer {
+    width: 20%;
+}
+
+#reference #image-slider {
     height: 100%;
 }
 #image-slider img{
@@ -148,4 +160,9 @@ h2{
     .footer .logo{
         margin: 10px;
     }
+}
+
+
+#printing .row{
+    align-items: center;
 }

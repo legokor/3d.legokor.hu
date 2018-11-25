@@ -2,58 +2,14 @@
 layout: default
 ---
 
-<div class="intro-video-container">
-    <video class="intro-video" autoplay muted loop>
-        <source src="/images/intro.mp4" type="video/mp4">
-    </video>
-    <div class="intro-video-fader"></div>
-</div>
+{% include intro.html %}
 
-<div class="container">
-    <div class="jumbotron">
-        <h1 class="display-4">Nyomtass velünk!</h1>
-        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
-            featured content or information.</p>
-        <hr class="my-4">
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-        <p class="lead">
-        <a class="btn btn-primary btn-lg" href="https://goo.gl/forms/lKywFmJHrKqdjGkO2" target="_blank" role="button">Kezdés »</a>
-        </p>
-    </div>
-</div>
+{% include calculator.html %}
+
+{% include about.html %}
+
+{% include reference.html %}
+
+{% include contact.html %}
 
 
-
-<div class="container-fluid" id="printing">
-    <div class="container">
-    <h2>Kalkulátor</h2>
-    {% include calculator.html %}
-</div>
-</div>
-
-<div class="container-fluid" id="about">
-    <h2>Rólunk</h2>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae ex semper, pulvinar urna et, imperdiet
-        massa.
-        Nullam quis feugiat sem, vel lacinia ipsum. Nam feugiat ex viverra, posuere justo et, dictum libero. Morbi
-        pellentesque
-        et augue ac placerat. Quisque blandit arcu ac efficitur ornare. Suspendisse porta nisi at euismod ornare. Nam
-        quis
-        cursus augue. Nullam vulputate arcu ac magna imperdiet, id dapibus felis maximus. Mauris dui enim, elementum
-        quis nulla
-        sed, bibendum elementum risus. Cras tellus felis, varius nec nisl quis, consectetur mollis dolor. Vestibulum
-        ullamcorper augue eu est blandit, et tempor lectus varius.
-    </p>
-</div>
-
-<div class="container-fluid" id="gallery">
-    <h2>Galéria</h2>
-    {% include carousel.html %}
-</div>
-
-<div class="container-fluid" id="contact">
-    <h2>Kapcsolat</h2>
-    <p>Email: 3dnyomtatas@simonyi.bme.hu</p>
-    <p>Hely: SCH1619</p>
-</div>
