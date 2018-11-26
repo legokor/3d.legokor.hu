@@ -25,19 +25,7 @@ $(document).ready(function () {
 
     });
 
-    //gallery
-    var $grid = $('.grid').masonry({
-        // options
-        itemSelector: '.grid-item',
-        columnWidth: '.grid-sizer',
-        percentPosition: true
-    });
-
-    $grid.imagesLoaded().progress(function () {
-        $grid.masonry('layout');
-    });
-  
-
+   
     $("#printing input").keyup(function(){
         calculatePrice();
     });
