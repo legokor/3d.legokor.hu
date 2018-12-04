@@ -25,19 +25,7 @@ $(document).ready(function () {
 
     });
 
-    //gallery
-    var $grid = $('.grid').masonry({
-        // options
-        itemSelector: '.grid-item',
-        columnWidth: '.grid-sizer',
-        percentPosition: true
-    });
-
-    $grid.imagesLoaded().progress(function () {
-        $grid.masonry('layout');
-    });
-  
-
+   
     $("#printing input").keyup(function(){
         calculatePrice();
     });
@@ -45,17 +33,24 @@ $(document).ready(function () {
     $("#calculate").click(function(){
         calculatePrice();
     });
+    
+    $("#printtime").val($("#printtimeslider").val());
+
+    $("#printtimeslider").on("input",function () {
+        $("#printtime").val($(this).val());
+        calculatePrice();
+    });
 
     function calculatePrice(){
         var x = parseInt($("#xsize").val());
         var y = parseInt($("#ysize").val());
         var z = parseInt($("#zsize").val());
-        
-        var magicConstant = 0.003925233;
+        var hours = parseFloat($("#printtime").val());
 
-        var cost = x*y*z*magicConstant;
-        console.log(cost);
+        var magicConstant = 0.00155986;
+
+        var cost = x*y*z*magicConstant+hours*400;
         if (isNaN(cost)) $("#price").text("Töltsd ki a mezőket!");
-        else $("#price").text(cost+" Ft");
+        else $("#price").text(Math.round(cost)+" Ft");
     }
 });
