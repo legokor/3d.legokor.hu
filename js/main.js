@@ -51,6 +51,6 @@ $(document).ready(function () {
 
         var cost = x*y*z*magicConstant+hours*400;
         if (isNaN(cost)) $("#price").text("Töltsd ki a mezőket!");
-        else $("#price").text(Math.round(cost)+" Ft");
+        else $("#price").text(Math.round(cost)+" JMF");
     }
 });
