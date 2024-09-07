@@ -1,56 +1,55 @@
 $(document).ready(function () {
-    changeNavbarStyle();
+	changeNavbarStyle();
 
-    $(document).scroll(function () {
-       changeNavbarStyle();
-    });
-    
-    function changeNavbarStyle(){
-        var $nav = $(".navbar");
-        $nav.toggleClass('scrolled', $(document).scrollTop() > $nav.height());
-    }
+	$(document).scroll(function () {
+		changeNavbarStyle();
+	});
 
-    $(".nav-item").click(function(){
-        event.preventDefault();
-        
-        $(".nav-item").removeClass("active");
-        $(this).addClass("active");
-        
-        var selector = $(this).find(".nav-link").attr("href");
-        var topPosition = $(selector).offset().top;
-        var offset = $(".navbar").outerHeight();
-        
-        var body = $("html, body");
-        body.stop().animate({ scrollTop: topPosition-offset }, 500, 'swing');
+	function changeNavbarStyle() {
+		var $nav = $('.navbar');
+		$nav.toggleClass('scrolled', $(document).scrollTop() > $nav.height());
+	}
 
-    });
+	$('.nav-item').click(function (e) {
+		var selector = $(this).find('.nav-link').attr('href');
+		if (selector.length == 0 || selector[0] != '#') return;
+		else e.preventDefault();
 
-   
-    $("#printing input").keyup(function(){
-        calculatePrice();
-    });
+		$('.nav-item').removeClass('active');
+		$(this).addClass('active');
 
-    $("#calculate").click(function(){
-        calculatePrice();
-    });
-    
-    $("#printtime").val($("#printtimeslider").val());
+		var topPosition = $(selector).offset().top;
+		var offset = $('.navbar').outerHeight();
 
-    $("#printtimeslider").on("input",function () {
-        $("#printtime").val($(this).val());
-        calculatePrice();
-    });
+		var body = $('html, body');
+		body.stop().animate({ scrollTop: topPosition - offset }, 500, 'swing');
+	});
 
-    function calculatePrice(){
-        var x = parseInt($("#xsize").val());
-        var y = parseInt($("#ysize").val());
-        var z = parseInt($("#zsize").val());
-        var hours = parseFloat($("#printtime").val());
+	// $("#printing input").keyup(function(){
+	//     calculatePrice();
+	// });
 
-        var magicConstant = 0.00155986;
+	// $("#calculate").click(function(){
+	//     calculatePrice();
+	// });
 
-        var cost = x*y*z*magicConstant+hours*400;
-        if (isNaN(cost)) $("#price").text("Töltsd ki a mezőket!");
-        else $("#price").text(Math.round(cost)+" JMF");
-    }
+	// $("#printtime").val($("#printtimeslider").val());
+
+	// $("#printtimeslider").on("input",function () {
+	//     $("#printtime").val($(this).val());
+	//     calculatePrice();
+	// });
+
+	// function calculatePrice(){
+	//     var x = parseInt($("#xsize").val());
+	//     var y = parseInt($("#ysize").val());
+	//     var z = parseInt($("#zsize").val());
+	//     var hours = parseFloat($("#printtime").val());
+
+	//     var magicConstant = 0.00155986;
+
+	//     var cost = x*y*z*magicConstant+hours*400;
+	//     if (isNaN(cost)) $("#price").text("Töltsd ki a mezőket!");
+	//     else $("#price").text(Math.round(cost)+" JMF");
+	// }
 });

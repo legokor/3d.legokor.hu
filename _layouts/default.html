@@ -3,7 +3,26 @@
 {% include head.html %}
 
 <body>
+    <div class="video-container">
+        <video class="intro-video d-lg-block hide" autoplay muted loop>
+            <source src="/images/intro2.mp4" type="video/mp4">
+        </video>
+        <div class="intro-video-fader hide"></div>
+
+        {% include navbar.html %}
+
+        {% include intro.html %}
+    </div>
+
     {% include navbar.html %}
+
+    {% include intro.html %}
+
+    {% include about.html %}
+
+    {% include reference.html %}
+
+    {% include contact.html %}
     {{ content }}
     {% include footer.html %}
 </body>

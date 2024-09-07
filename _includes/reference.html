@@ -1,14 +1,14 @@
 <div class="container-fluid" id="reference">
     <h2>Referenciák</h2>
 
-     <div id="image-slider" class="carousel slide" data-ride="carousel">
+    <div id="image-slider" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             {% for image in site.static_files %}
-                {% if image.path contains 'images/gallery' %}
-                    <div class="carousel-item {%if forloop.index == 3%}active{% endif %}">
-                        <img class="d-block" src="{{ image.path }}" alt="gallery-image-{{forloop.index}}">
-                    </div>
-                {% endif %}
+            {% if image.path contains 'images/gallery' %}
+            <div class="carousel-item {%if forloop.index == 3%}active{% endif %}">
+                <img class="d-block" src="{{ image.path }}" alt="gallery-image-{{forloop.index}}">
+            </div>
+            {% endif %}
             {% endfor %}
         </div>
 

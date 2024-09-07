@@ -2304,19 +2304,26 @@ body { background-color: black; background-image: url("/images/pattern2.png"); b
 
 .nav-item.active { background-color: #ff9800; color: #fff; }
 
+.nav-item:not(.active):hover { color: #ff9800; }
+
+.nav-link:hover { color: inherit !important; }
+
 h2 { text-align: center; }
 
-.intro-video-container { max-height: 500px; height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; z-index: -1; }
-
-@media (max-width: 450px) { .intro-video-container { max-height: inherit; } }
 .intro-video, .intro-image { position: absolute; object-fit: cover; width: 100%; height: 100%; }
 
-.intro-video-fader { position: absolute; width: 100%; height: 100%; z-index: 2; background: rgba(0, 0, 0, 0.8); }
+.intro-video-fader { position: absolute; width: 100%; height: 100%; z-index: -1; background: rgba(0, 0, 0, 0.8); }
 
 .jumbotron { color: white; background-color: transparent; margin-bottom: 0px; }
 
-@media (max-width: 992px) { .jumbotron { padding: 0; } }
-#printing { background-color: white; padding: 20px; }
+@media (max-width: 992px) { .jumbotron { padding: 0; color: black; } }
+.video-container { position: absolute; margin-left: 0; margin-right: 0; width: 100%; }
+
+video { width: 100%; height: 100%; position: absolute; object-fit: cover; z-index: -2; left: 0; top: 0; }
+
+@media (max-width: 992px) { .video-container > .hide { display: none; }
+  #navBar { transform: translateY(10px); } }
+#printing2 { background-color: white; padding: 20px; }
 
 #contact, #about, #reference { width: 100%; padding: 20px; }
 
@@ -2328,9 +2335,7 @@ h2 { text-align: center; }
 
 #image-slider img { max-height: 400px; height: 100%; margin: 0 auto; }
 
-.carousel-control-prev-icon { background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#ff9800' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E"); }
-
-.carousel-control-next-icon { background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#ff9800' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E"); }
+.carousel-control-prev-icon, .carousel-control-next-icon { filter: invert(1); }
 
 .footer { padding: 15px 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; background-color: #ff9800; color: white; }
 
@@ -2339,6 +2344,8 @@ h2 { text-align: center; }
 @media (max-width: 992px) { .footer { justify-content: center; }
   .footer .logo-container { display: flex; flex-wrap: wrap; justify-content: center; }
   .footer .logo { margin: 10px; } }
-#printing .row { align-items: center; }
+#printing2 .row { align-items: center; }
 
 #printtimeslider { margin-top: 15px; }
+
+.carousel-item img { max-width: 100%; }
