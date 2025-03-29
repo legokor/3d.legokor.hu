@@ -5,9 +5,11 @@
         <div class="carousel-inner" id="gallery">
             {% for image in site.static_files %}
             {% if image.path contains 'images/gallery' %}
+            {% if image.path contains '-sm.jpg' %}
             <div class="carousel-item">
                 <img class="d-block" src="{{ image.path }}" alt="gallery-image-{{forloop.index}}">
             </div>
+            {% endif %}
             {% endif %}
             {% endfor %}
         </div>
