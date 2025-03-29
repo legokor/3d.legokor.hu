@@ -52,4 +52,13 @@ $(document).ready(function () {
 	//     if (isNaN(cost)) $("#price").text("Töltsd ki a mezőket!");
 	//     else $("#price").text(Math.round(cost)+" JMF");
 	// }
+
+	var gallery = $('#gallery');
+	var items = gallery.children().toArray();
+	items.sort(function () {
+		return Math.random() - 0.5;
+	});
+	gallery.empty().append(items);
+	gallery.children().removeClass('active');
+	gallery.children().first().addClass('active');
 });
